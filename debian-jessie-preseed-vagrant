@@ -121,11 +121,11 @@ d-i mirror/http/proxy string
 d-i passwd/root-password-crypted password 01a915a28c6dde2f34babff8dc3aa527
 
 # To create a normal user account.
-#d-i passwd/user-fullname string Debian User
-#d-i passwd/username string debian
+d-i passwd/user-fullname string Vagrant User
+d-i passwd/username string vagrant
 # Normal user's password, either in clear text
-#d-i passwd/user-password password insecure
-#d-i passwd/user-password-again password insecure
+d-i passwd/user-password password vagrant
+d-i passwd/user-password-again password vagrant
 # or encrypted using an MD5 hash.
 #d-i passwd/user-password-crypted password [MD5 hash]
 # Create the first user with the specified UID instead of the default.
@@ -141,7 +141,7 @@ d-i clock-setup/utc boolean true
 
 # You may set this to any valid setting for $TZ; see the contents of
 # /usr/share/zoneinfo/ for valid values.
-d-i time/zone string US/Eastern
+d-i time/zone string US/Pacific
 
 # Controls whether to use NTP to set the clock during the install
 d-i clock-setup/ntp boolean true
